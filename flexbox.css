@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	/* Body är en flex-container */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header, main, footer {
+	padding: 2em;
+}
+
+header {
+	background-color: #3EBC68;
+	/* flex-grow: 1; */
+}
+
+main {
+	background-color: #90E7AD;
+	flex-grow: 1;
+}
+
+footer {
+	background-color: #1F3D29;
+	color: #CADED1;
+}
