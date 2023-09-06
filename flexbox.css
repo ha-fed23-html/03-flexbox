@@ -26,16 +26,19 @@ footer {
 }
 
 
-.vertical {
-	width: 10em;
-	height: 18em;
+.vertical, .horizontal {
 	border: 1px solid black;
 	background-color: rgb(111, 177, 96);
 	display: flex;
-	flex-direction: column;
-	padding: 0 1em;
+
 }
-.vertical > * {
+.vertical {
+	width: 10em;
+	height: 18em;
+	flex-direction: column;
+	padding: 0.5em 1em;
+}
+.vertical > *, .horizontal > * {
 	border: 1px solid black;
 	background-color: rgb(228, 217, 143);
 	flex-grow: 1;
@@ -45,17 +48,8 @@ footer {
 .horizontal {
 	width: 18em;
 	height: 10em;
-	border: 1px solid black;
-	background-color: rgb(111, 177, 96);
-	display: flex;
 	flex-direction: row;
-	padding: 1em 0;
-}
-.horizontal > * {
-	border: 1px solid black;
-	background-color: rgb(228, 217, 143);
-	flex-grow: 1;
-	margin: 0.2em;
+	padding: 1em 0.5em;
 }
 
 .container-row {
