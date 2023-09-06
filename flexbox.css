@@ -38,11 +38,14 @@ footer {
 	flex-direction: column;
 	padding: 0.5em 1em;
 }
+/* Specificitet: 010 och 010 */
 .vertical > *, .horizontal > * {
 	border: 1px solid black;
 	background-color: rgb(228, 217, 143);
 	flex-grow: 1;
+	flex-basis: 0px;
 	margin: 0.2em;
+	text-align: center;
 }
 
 .horizontal {
@@ -50,9 +53,48 @@ footer {
 	height: 10em;
 	flex-direction: row;
 	padding: 1em 0.5em;
+	/* align-items: flex-end; */
 }
+/* .horizontal > * {
+	height: 4em;
+} */
 
 .container-row {
 	display: flex;
 	justify-content: space-between;
+}
+
+/* Kom ihåg att stänga av flex-grow om du använder flex-basis! */
+/* Specificitet: 020 (:nth-child är en pseudoklass, samma poäng som klass)  */
+/* .horizontal > :nth-child(2) {
+	flex-grow: 0;
+	flex-basis: 30px;
+	flex: 0 0 30px;
+} */
+
+/* .horizontal > :nth-child(1) {
+	flex-grow: 3;
+} */
+
+
+.container-center {
+	border: 1px solid black;
+	margin-bottom: 1em;
+	width: 10em;
+	height: 6em;
+	background-color: #346DE0;
+	/* flex-direction har standardvärdet ROW */
+	/* main-axis är också ROW (justify) */
+	/* cross-axis är COLUMN (align) */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-center > * {
+	width: 4em;
+	height: 3em;
+	border: 1px solid black;
+	background-color: rgb(112, 167, 234);
+	text-align: center;
 }
