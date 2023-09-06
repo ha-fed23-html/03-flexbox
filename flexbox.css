@@ -76,7 +76,7 @@ footer {
 	flex-grow: 3;
 } */
 
-
+/* Flex container */
 .container-center {
 	border: 1px solid black;
 	margin-bottom: 1em;
@@ -91,6 +91,7 @@ footer {
 	align-items: center;
 }
 
+/* Flex items */
 .container-center > * {
 	width: 4em;
 	height: 3em;
